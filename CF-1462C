@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+
+namespace string_generation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            dict.Add(1, "1");
+            dict.Add(2, "2");
+            dict.Add(3, "3");
+            dict.Add(4, "4");
+            dict.Add(5, "5");
+            dict.Add(6, "6");
+            dict.Add(7, "7");
+            dict.Add(8, "8");
+            dict.Add(9, "9");
+
+            dict.Add(10, "19");
+            dict.Add(11, "29");
+            dict.Add(12, "39");
+            dict.Add(13, "49");
+            dict.Add(14, "59");
+            dict.Add(15, "69");
+            dict.Add(16, "79");
+            dict.Add(17, "89");
+
+            dict.Add(18, "189");
+            dict.Add(19, "289");
+            dict.Add(20, "389");
+            dict.Add(21, "489");
+            dict.Add(22, "589");
+            dict.Add(23, "689");
+            dict.Add(24, "789");
+
+            dict.Add(25, "1789");
+            dict.Add(26, "2789");
+            dict.Add(27, "3789");
+            dict.Add(28, "4789");
+            dict.Add(29, "5789");
+            dict.Add(30, "6789");
+
+            dict.Add(31, "16789");
+            dict.Add(32, "26789");
+            dict.Add(33, "36789");
+            dict.Add(34, "46789");
+            dict.Add(35, "56789");
+
+            dict.Add(36, "156789");
+            dict.Add(37, "256789");
+            dict.Add(38, "356789");
+            dict.Add(39, "456789");
+
+            dict.Add(40, "1456789");
+            dict.Add(41, "2456789");
+            dict.Add(42, "3456789");
+
+            dict.Add(43, "13456789");
+            dict.Add(44, "23456789");
+
+            dict.Add(45, "123456789");
+            for (int i = 0; i < t; i++)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n<=45)
+                {
+                    Console.WriteLine(dict[n]);
+                }
+                else
+                {
+                    Console.WriteLine(-1);
+                }
+            }
+        }
+    }
+}
