@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+
+namespace string_generation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] text = Console.ReadLine().Split(' ');
+            int n = int.Parse(text[0]);
+            int m = int.Parse(text[1]);
+            int result = (((n / 2) + (n % 2)) * ((m / 2) + (m % 2)));
+            Console.WriteLine(result);
+        }
+    }
+}
