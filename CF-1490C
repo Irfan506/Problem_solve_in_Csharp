@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+
+namespace cf1490C
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            HashSet<long> cube = new HashSet<long>();
+            for (long i = 1; i <= 10005; i++)
+                cube.Add(i * i * i);
+            long t = Convert.ToInt64(Console.ReadLine());
+            for(long i = 0; i < t; i++)
+            {
+                bool flag = false;
+                long n = Convert.ToInt64(Console.ReadLine());
+                for(long j = 1; j <= 10005; j++)
+                {
+                    if (!cube.Contains(n - j * j * j))
+                        continue;
+                    flag = true;
+                    break;
+                }
+                Console.WriteLine(flag ? "YES" : "NO");
+
+            }
+
+        }
+    }
+}
