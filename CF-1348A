@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+namespace cf1348A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+            while(t!=0)
+            {
+                t--;
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n == 2)
+                {
+                    Console.WriteLine("2");
+                    continue;
+                }
+                double a = Math.Pow(2, n),b=0;
+                for(int i=n-1;i>=n/2;i--)
+                {
+                    b += Math.Pow(2, i);
+                }
+                for (int i = 1; i < n / 2; i++)
+                    a += Math.Pow(2, i);
+                Console.WriteLine(a - b);
+            }
+
+        }
+    }
+}
