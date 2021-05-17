@@ -1,0 +1,48 @@
+using System;
+
+namespace _711A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            string[] str = new string[n];
+            for(int i=0;i<n;i++)
+            {
+                str[i] = Console.ReadLine();
+            }
+            int flag = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (flag == 1)
+                    break;
+                char[] ch = str[i].ToCharArray();
+                if(ch[0]=='O'&&ch[1]=='O')
+                {
+                    flag = 1; ;
+                    ch[0] = '+';
+                    ch[1] = '+';
+                    str[i] = new string(ch);
+                } 
+                else
+                    if (ch[3] == 'O' && ch[4] == 'O')
+                {
+                    flag = 1; ;
+                    ch[3] = '+';
+                    ch[4] = '+';
+                    str[i] = new string(ch);
+                }
+            }
+            if (flag == 0)
+                Console.WriteLine("NO");
+            else
+            {
+                Console.WriteLine("YES");
+                for (int i = 0; i < n; i++)
+                    Console.WriteLine(str[i]);
+            }
+
+        }
+    }
+}
