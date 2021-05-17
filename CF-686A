@@ -1,0 +1,35 @@
+using System;
+
+namespace _686A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] input = (Console.ReadLine()).Split(' ');
+            long n = Convert.ToInt64(input[0]);
+            long x = Convert.ToInt64(input[1]);
+            long dis = 0;
+            for(int i=0;i<n;i++)
+            {
+                string[] text = (Console.ReadLine()).Split(' ');
+                string a = (text[0]);
+                long b = Convert.ToInt64(text[1]);
+                if (a[0] == '+')
+                    x += b;
+                else
+                    if (a[0] == '-')
+                {
+                    if (b > x)
+                        dis++;
+                    else
+                        x -= b;
+                }
+            }
+            string str = Convert.ToString(x);
+            str += ' ';
+            str += Convert.ToString(dis);
+            Console.WriteLine(str);
+        }
+    }
+}
