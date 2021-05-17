@@ -1,0 +1,24 @@
+using System;
+
+namespace _540A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            string str1 = Console.ReadLine();
+            string str2 = Console.ReadLine();
+            int i, j;
+            int flag, sum = 0;
+            for(int k=0;k<str1.Length;k++)
+            {
+                i = Convert.ToInt32(str1[k]);
+                j = Convert.ToInt32(str2[k]);
+                flag = Math.Min(10-Math.Abs(i-j),Math.Abs(i-j));
+                sum += flag;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
