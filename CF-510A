@@ -1,0 +1,42 @@
+using System;
+
+namespace _510A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var text = (Console.ReadLine()).Split(' ');
+            int n = int.Parse(text[0]);
+            int m = int.Parse(text[1]);
+            int flag = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    for (int j = 1; j <= m; j++)
+                        Console.Write("#");
+                }
+                else
+                {
+                    if (flag == 1)
+                    {
+                        for (int j = 1; j <= m - 1; j++)
+                            Console.Write(".");
+                        Console.Write("#");
+                        flag = 0;
+                    }
+                    else
+                        if (flag == 0)
+                    {
+                        Console.Write("#");
+                        for (int j = 1; j <= m - 1; j++)
+                            Console.Write(".");
+                        flag = 1;
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
