@@ -1,0 +1,19 @@
+using System;
+
+namespace 1199B
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var line = Console.ReadLine();
+            var data = line.Split(' ');
+            var h = double.Parse(data[0]);
+            var l = double.Parse(data[1]);
+            double ans = ((l * l) - (h * h)) / (2 * h);
+            Console.WriteLine(String.Format("{0:0.0000000000000}", ans));
+
+        }
+    }
+}
