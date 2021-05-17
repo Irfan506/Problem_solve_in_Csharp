@@ -1,0 +1,35 @@
+using System;
+
+namespace _131A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine();
+            char[] ch = str.ToCharArray();
+            int flag = 0;
+            for(int i=1;i<str.Length;i++)
+            {
+                if (str[i] >= 65 && str[i] <= 90)
+                    flag++;
+            }
+            if(flag==str.Length-1)
+            {
+                for(int i=0;i<ch.Length;i++)
+                {
+
+                    if (char.IsUpper(ch[i]))
+                        ch[i] = char.ToLower(ch[i]);
+                    else
+                        if (char.IsLower(ch[i]))
+                        ch[i] = char.ToUpper(ch[i]);
+                    
+                }
+            }
+            string str1 = new string(ch);
+            Console.WriteLine(str1);
+
+        }
+    }
+}
