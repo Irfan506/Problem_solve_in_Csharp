@@ -1,0 +1,50 @@
+using System;
+
+namespace _1108A
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+            while(t!=0)
+            {
+                t--;
+                string str = "";
+                string[] text = (Console.ReadLine()).Split(' ');
+                int l1 = int.Parse(text[0]);
+                int r1 = int.Parse(text[1]);
+                int l2 = int.Parse(text[2]);
+                int r2 = int.Parse(text[3]);
+                if(l1!=l2)
+                {
+                    str += Convert.ToString(l1);
+                    str += ' ';
+                    str += Convert.ToString(l2);
+                }
+                else
+                    if (l1 != r2)
+                {
+                    str += Convert.ToString(l1);
+                    str += ' ';
+                    str += Convert.ToString(r2);
+                }
+                else
+                    if (r1 != l2)
+                {
+                    str += Convert.ToString(r1);
+                    str += ' ';
+                    str += Convert.ToString(l2);
+                }
+                else
+                    if (r1 != r2)
+                {
+                    str += Convert.ToString(r1);
+                    str += ' ';
+                    str += Convert.ToString(r2);
+                }
+                Console.WriteLine(str);
+            }
+        }
+    }
+}
