@@ -1,0 +1,40 @@
+using System;
+
+namespace Tit_for_tat
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int t = Convert.ToInt32(Console.ReadLine());
+            while(t>0)
+            {
+                t--;
+                string[] str = Console.ReadLine().Split(' ');
+                int n = int.Parse(str[0]);
+                int k = int.Parse(str[1]);
+                int[] arr = new int[n];
+                string[] input = Console.ReadLine().Split(' ');
+                for(int i=0;i<n;i++)
+                {
+                    arr[i] = int.Parse(input[i]);
+                }
+                for(int i=0;i<n-1;i++)
+                {
+                    while(arr[i]!=0&&k>0)
+                    {
+                        arr[i]--;
+                        arr[n - 1]++;
+                        k--;
+                    }
+                }
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write(arr[i] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
