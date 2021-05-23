@@ -1,0 +1,37 @@
+using System;
+
+namespace Hit_the_Lottery
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            long n = Convert.ToInt64(Console.ReadLine());
+            long num = 0;
+            if(n>=100)
+            {
+                num += (n / 100);
+                n = n % 100;
+            }
+            if (n >= 20)
+            {
+                num += (n / 20);
+                n = n % 20;
+            }
+            if (n >= 10)
+            {
+                num += (n / 10);
+                n = n % 10;
+            }
+            if (n >= 5)
+            {
+                num += (n / 5);
+                n = n % 5;
+            }
+
+            num += n;
+            Console.WriteLine(num);
+        }
+    }
+}
