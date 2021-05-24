@@ -1,0 +1,26 @@
+using System;
+
+namespace QAQ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine();
+            int ans = 0;
+            for(int i=0;i<str.Length;i++)
+            {
+                for(int j=i+1;j<str.Length;j++)
+                {
+                    for(int k=j+1;k<str.Length;k++)
+                    {
+                        if (str[i] == 'Q' && str[j] == 'A' && str[k] == 'Q')
+                            ans++;
+                    }
+                }
+            }
+            Console.WriteLine(ans);
+           
+        }
+    }
+}
