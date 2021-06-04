@@ -1,0 +1,31 @@
+using System;
+
+namespace Maximum_Increase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long n = Convert.ToInt64(Console.ReadLine());
+            long[] arr = new long[n + 1];
+            string[] input = Console.ReadLine().Split(' ');
+            for (long i = 0; i < n; i++)
+                arr[i] = long.Parse(input[i]);
+            int flag = 1,ans=1;
+            for (long i = 0; i < n-1; i++)
+            {
+                if (arr[i] < arr[i + 1])
+                {
+                    flag++;
+                    ans = Math.Max(ans, flag);
+                }
+
+                else
+                    flag = 1;
+            }
+
+            Console.WriteLine(ans);
+
+        }
+    }
+}
