@@ -1,0 +1,23 @@
+using System;
+
+namespace Omkar_and_Completion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+            while(t>0)
+            {
+                t--;
+                int n = Convert.ToInt32(Console.ReadLine());
+                for(int i=1;i<=n;i++)
+                {
+                    Console.Write(1 + " ");
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
