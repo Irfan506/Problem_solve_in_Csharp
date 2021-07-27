@@ -1,0 +1,42 @@
+using System;
+
+namespace Polycarp_and_Coins
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long t = Convert.ToInt64(Console.ReadLine());
+            while(t>0)
+            {
+                t--;
+                double n = Convert.ToDouble(Console.ReadLine());
+                double rslt = n / 3;
+                int c1=0, c2=0;
+                rslt = rslt * 10;
+                int flag = (int)(rslt % 10);
+                if(n%3==0)
+                {
+                    c2 = (int)(n / 3);
+                    c1 = (int)(n - (c2 * 2));
+
+                }
+                else
+                if(flag==3)
+                {
+                    c2 = (int)(n / 3);
+                    c1 = (int)(n - (c2 * 2));
+                }
+                else
+                if(flag==6)
+                {
+                    c1 = (int)(n / 3);
+                    c2 = (int)(n -c1)/2;
+                }
+
+                Console.WriteLine("{0} {1}", c1, c2);
+                
+            }
+        }
+    }
+}
